@@ -94,6 +94,21 @@ form button{
     padding:4px 10px;
 }
 
+#result-number-container {
+    display:flex;
+    justify-content: center;
+    padding-top: 3em;
+    color:ivory;
+    background: none ;
+}
+
+#result-number-container h2{
+    color:black;
+}
+
+
+
+
 
 #result{
 

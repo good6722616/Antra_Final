@@ -1,7 +1,7 @@
 const form = document.getElementById('form');
 const search = document.getElementById('search');
 const result = document.getElementById('result');
-const result_number = document.getElementsByClassName('result-number');
+const result_number = document.getElementById('result-number');
 
 
 
@@ -14,8 +14,12 @@ async function searchAlbums(term){
     const data = await res.json();
     console.log(data);
 
-    // result_number.innerHTML=`${length} results were found`;
-    showData(data.results);
+    
+    result_number.innerHTML =  ` ${data.resultCount} results found `;
+
+
+    const albums = await data.results;
+    showData(albums);
 }
 
 //show album in DOM

@@ -12,16 +12,16 @@ const result_number = document.getElementsByClassName('result-number');
 async function searchAlbums(term){
     const res = await fetchJsonp(`https://itunes.apple.com/search?term=${term}&media=music&entity=album&attribute=artistTerm&limit=200`);
     const data = await res.json();
-    // console.log(data);
+    console.log(data);
 
     // result_number.innerHTML=`${length} results were found`;
-    // showData(data.result);
+    showData(data.results);
 }
 
 //show album in DOM
 function showData(albums) {
     result.innerHTML = "";
-    albums.forEach(album => {
+    albums.forEach((album) => {
         const albumEl = document.createElement("div");
         albumEl.classList.add("album");
         albumEl.innerHTML=

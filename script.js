@@ -66,7 +66,7 @@ function showData(albums) {
                 alt="${album.collectionName}"
             />
             <div class="album-info">
-                <h2>${album.collectionName};
+                <h2>${album.collectionName}
             </div>
         `;
         result.appendChild(albumEl);

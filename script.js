@@ -4,6 +4,17 @@ const result = document.getElementById('result');
 const result_number = document.getElementById('result-number');
 const loader = document.querySelector("#loading");
 
+const header = document.getElementById("header");
+const sticky = header.offsetTop;
+window.onscroll = function() {fixedHeader()};
+function fixedHeader() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+}
+
 
 
 

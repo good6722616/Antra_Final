@@ -3,7 +3,7 @@
 }
 
 body{
-    background-color: white;
+    background-color:white;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     justify-content: center;
@@ -24,21 +24,22 @@ input:focus,button:focus{
 }
 
 header{
-    background-image: url('https://mobirise.com/extensions/simpleamp/assets/images/background17.jpg');
+    background-image: url('https://img.freepik.com/free-photo/musical-notes-yellow-background-copy-space-3d-illustration_522591-1482.jpg?w=2000');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     color:white;
 
-    /* good for most projects */
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* ------ */
+
 
     padding: 30px 0;
-    position: relative;
+    position:relative;
+    z-index:1000;
+    
 
 }
 
@@ -68,6 +69,7 @@ form{
     display: flex;
 }
 
+
 form input{
     border:0;
     border-radius:50px;
@@ -76,6 +78,15 @@ form input{
     width:100%;
 
 }
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+
 
 
 button[type="submit"] {
@@ -134,11 +145,23 @@ button[type="submit"] {
     }
 }
 
-hr.solid {
-    border-top: 3px solid #bbb;
-  }
-
-
+hr.divider {
+    overflow: visible;
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr.divider:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
 
 
 #result-number-container {

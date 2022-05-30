@@ -25,7 +25,7 @@ async function searchAlbums(term){
     displayLoading()
     const res = await fetchJsonp(`https://itunes.apple.com/search?term=${term}&media=music&entity=album&attribute=artistTerm&limit=200`);
     const data = await res.json();
-    // console.log(data);
+    console.log(data);
 
     
     result_number.innerHTML =  ` ${data.resultCount} results found `;
@@ -66,7 +66,7 @@ function showData(albums) {
                 alt="${album.collectionName}"
             />
             <div class="album-info">
-                <h2>${album.collectionName}
+                <h2>Album: ${album.collectionName}</h2>
             </div>
         `;
         result.appendChild(albumEl);
